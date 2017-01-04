@@ -1,0 +1,39 @@
+.attached-bottom {
+    bottom: 20%;
+    margin: auto;
+    width: 80%;
+}
+
+.msg-input {
+    bottom: 0;
+    padding-bottom: 4px;
+    width: 100%;
+}
+
+.my-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+}
+
+.main-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.myMsg {
+    background-color: #7E57C2;
+}
+
+.notMyMsg {
+    background-color: #42A5F5;
+}
+
+.msg-ul{
+  flex:1;
+  height:34px;
+}
+

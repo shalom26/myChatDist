@@ -1,0 +1,10 @@
+<div class="main-box">
+    <div class="my-container">
+        <ul class="list-group msg-ul" style="width:100%;overflow-y:auto" #scroll>
+            <li *ngFor="let msg of msgs" [ngClass]="{myMsg: msg.user === currUser.name}" class="list-group-item" style="width:100%">
+                <casific-message [msg]="msg" class="col-right"></casific-message>
+            </li>
+        </ul>
+        <input class="msg-input" type="text" (keyup.enter)="newMsg()" [(ngModel)]="newMsgInput">
+    </div>
+</div>

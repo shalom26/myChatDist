@@ -1,0 +1,11 @@
+<div class="container container-table">
+  <div class="vertical-center-row">
+    <section class="welcome"><h1>Welcome . . . </h1></section>
+      <input #user type="text" id="form1" class="input-dark-bg my-input" (keyup.enter)="userLogin(user.value)"
+             placeholder="Login">
+    <div class="avatar-imgs-container">
+      <img class="avatar" *ngFor=" let avatar of avatars" src={{avatar.url}}
+           [ngClass]="{'avatar-choose':avatar.isChoose}" (click)="chooseAvatar(avatar)">
+    </div>
+  </div>
+</div>

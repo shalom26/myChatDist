@@ -1,0 +1,53 @@
+.container-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4B515D;
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.vertical-center-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    padding: 3em 0;
+    color: white;
+}
+
+.my-input{
+    border-radius: 4px;
+    padding: 5px 10px;
+    width: 20vw;
+}
+.avatar-imgs-container{
+  display: flex;
+  left:0;
+  width: 80vw;
+  flex-wrap: wrap;
+}
+
+.avatar{
+  padding:2em;
+  border-color: #4B515D;
+  transform: scale(1);
+  transition: .3s ease-in-out;
+
+}
+.avatar:hover{
+  border-color: #42A5F5;
+  transform: scale(1.3);
+}
+.avatar-choose{
+  border-radius: 50%;
+  transform: scale(1.3);
+}
