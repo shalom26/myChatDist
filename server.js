@@ -12,7 +12,7 @@ mongoose.Promise = Promise;
 
 app.use(bodyParser.json());
 
-app.set('views', __dirname + '/../chat/src/');
+app.set('views', __dirname + '/../chat/dist/');
 
 app.get('/', function(request, response) {
     response.render('/index.html');
