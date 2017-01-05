@@ -4,8 +4,8 @@
 const app = require('express')();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-let Promise = require('bluebird');
-let Schema = mongoose.Schema;
+const Promise = require('bluebird');
+const Schema = mongoose.Schema;
 
 
 mongoose.Promise = Promise;
