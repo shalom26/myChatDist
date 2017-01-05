@@ -46,7 +46,7 @@ db.on('open', function() {
     // we're connected!
 
     app.get('/msg',(req,res)=>{
-        Msg.find().sort('-date').limit(10).exec().then(data=>{
+        Msg.find().sort({updatedAt: 1}).limit(10).exec().then(data=>{
             res.json(data);
         });
     });
