@@ -12,10 +12,10 @@ mongoose.Promise = Promise;
 
 app.use(bodyParser.json());
 
-app.set('views', __dirname + '/../chat/src/index.html');
+app.set('views', __dirname + '/../chat/src/');
 
 app.get('/', function(request, response) {
-    response.render('/index');
+    response.render('/index.html');
 });
 
 mongoose.connect('mongodb://shalom26:seventy6@ds155028.mlab.com:55028/chat');
