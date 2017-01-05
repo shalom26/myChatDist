@@ -18,7 +18,7 @@ export class LoginSrvc implements OnInit {
     }
 
     loginToChat(user,avatar){
-      return this.http.post('api/login', {name:user,avatar:avatar})
+      return this.http.post('/login', {name:user,avatar:avatar})
         .map(res=>res.json()).toPromise()
     }
 

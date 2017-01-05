@@ -14,12 +14,12 @@ export class WallSrvc  {
 
   sendMsg(msg){
     console.log('msg',msg);
-    return this.http.post('api/msg',msg)
+    return this.http.post('/msg',msg)
         .map((res)=> res.json())
     }
 
   getAllmsg(){
-    return this.http.get('api/msg')
+    return this.http.get('/msg')
         .map((res)=> res.json())
         .toPromise()
   }
