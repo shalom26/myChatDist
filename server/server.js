@@ -12,13 +12,12 @@ mongoose.Promise = Promise;
 
 app.use(bodyParser.json());
 
-// app.set('views', __dirname + '/../../chat/src/index.html');
 
-// app.get('/', function(request, response) {
-//     response.render('/index');
-// });
+app.get('/', function(request, response) {
+    response.sendFile('/index.html',{root:__dirname + '../chat/dist'});
+});
 
-mongoose.connect('mongodb://localhost:27017/test');
+mongoose.connect('mongodb://shalom26:seventy6@ds155028.mlab.com:55028/chat');
 
 var db = mongoose.connection;
 
@@ -42,7 +41,7 @@ var Msg  = mongoose.model('msg',msgSchema);
 
 db.on('error', console.error.bind(console, 'connection error:'));
 
-db.once('open', function() {
+db.on('open', function() {
     // we're connected!
 
     app.get('/msg',(req,res)=>{
@@ -55,9 +54,12 @@ db.once('open', function() {
     app.post('/msg',(req,res)=>{
         var msg = new Msg(req.body);
         console.log(msg);
-        msg.save((error)=>{
-            if(error) console.log(error);
-            res.json(201,req.body)
+        msg.save()
+            .then(data=>{
+                res.json(data)
+            })
+            .catch(error=>{
+                console.log(error)
         });
     });
 
@@ -70,7 +72,7 @@ db.once('open', function() {
 
         user.save((error)=>{
             if(error)console.log(error);
-            res.json(201,req.body)
+            res.json(req.body)
         });
     });
 
