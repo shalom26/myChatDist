@@ -46,7 +46,7 @@ db.on('open', function() {
     // we're connected!
 
     app.get('/msg',(req,res)=>{
-        Msg.find().exec().then(data=>{
+        Msg.find().sort({ field: -_id }).limit(10).exec().then(data=>{
             res.json(data);
         });
     });
