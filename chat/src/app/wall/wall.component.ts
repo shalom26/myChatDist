@@ -43,7 +43,7 @@ export class WallComponent implements OnInit,OnDestroy{
 
 
     newMsg(){
-        let obj = {user:this.currUser.user,avatarUrl:this.avatarUrl.url,msg:this.newMsgInput};
+        let obj = {user:this.currUser.name,avatarUrl:this.avatarUrl.url,msg:this.newMsgInput};
         this.wallSrvc.sendMsg(obj).subscribe((res)=>{
             this.scroll.nativeElement.scrollTop = this.scroll.nativeElement.scrollHeight;
             this.msgs.push(Object.assign({flag:true},obj));

@@ -12,6 +12,12 @@ mongoose.Promise = Promise;
 
 app.use(bodyParser.json());
 
+app.set('views', __dirname + '/dist');
+
+app.get('/', function(request, response) {
+    response.render('/index');
+});
+
 mongoose.connect('mongodb://localhost:27017/test');
 
 var db = mongoose.connection;

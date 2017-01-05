@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {LoginSrvc} from "./login/login.service";
 import { WallComponent } from './wall/wall.component';
-import { UserComponent } from './user/user.component';
 import {RouterModule} from "@angular/router";
 import {routes} from "./app.routes";
 import { MessageComponent } from './message/message.component';
@@ -18,7 +17,6 @@ import {WallSrvc} from "./wall/wall.service";
     AppComponent,
     LoginComponent,
     WallComponent,
-    UserComponent,
     MessageComponent
   ],
   imports: [
