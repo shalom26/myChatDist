@@ -46,7 +46,7 @@ db.on('open', function() {
     // we're connected!
 
     app.get('/msg',(req,res)=>{
-        Msg.find().sort({ field: 'asc', _id: -1 }).limit(10).exec().then(data=>{
+        Msg.find().exec().then(data=>{
             res.json(data);
         });
     });
@@ -71,10 +71,12 @@ db.on('open', function() {
         user.avatar = req.body.avatar;
         user.date =  Date.now();
 
-        user.save((error)=>{
-            if(error)console.log(error);
-            res.json(req.body)
-        });
+        user.save().then((data)=>{
+            res.json(data)
+        })
+            .catch(error=>{
+                console.log(error)
+            })
     });
 
     app.listen(3800,()=>{
