@@ -1,7 +1,8 @@
 /**
  * Created by Shalom on 02/01/2017.
  */
-const app = require('express')();
+const express = require('express');
+const app   = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 let Promise = require('bluebird');
