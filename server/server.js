@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 
 app.get('/', function(request, response) {
-    response.sendFile('/index.html',{root:__dirname + '../chat/dist'});
+    response.sendFile('/index.html',{root:__dirname + '/../chat/dist'});
 });
 
 mongoose.connect('mongodb://shalom26:seventy6@ds155028.mlab.com:55028/chat');
