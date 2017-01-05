@@ -18,7 +18,7 @@ app.get('/', function(request, response) {
     response.render('/index');
 });
 
-mongoose.connect('mongodb://localhost:27017/test');
+mongoose.connect('mongodb://shalom26:seventy6@ds155028.mlab.com:55028/chat');
 
 var db = mongoose.connection;
 
