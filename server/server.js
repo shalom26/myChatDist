@@ -12,7 +12,7 @@ mongoose.Promise = Promise;
 
 app.use(bodyParser.json());
 
-
+app.use(express.static(__dirname+'/../chat/dist'));
 app.get('/', function(request, response) {
     response.sendFile('/index.html',{root:__dirname + '/../chat/dist'});
 });
