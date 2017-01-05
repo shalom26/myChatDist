@@ -1,6 +1,6 @@
 <div class="main-box">
     <div class="my-container">
-        <ul class="list-group msg-ul" style="width:100%;overflow-y:auto" #scroll>
+        <ul class="list-group msg-ul" #scroll>
             <li *ngFor="let msg of msgs" [ngClass]="{myMsg: msg.user === currUser.name}" class="list-group-item" style="width:100%">
                 <casific-message [msg]="msg" class="col-right"></casific-message>
             </li>

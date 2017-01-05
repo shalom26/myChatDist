@@ -12,11 +12,11 @@ mongoose.Promise = Promise;
 
 app.use(bodyParser.json());
 
-app.set('views', __dirname + '/../../chat/src/index.html');
+// app.set('views', __dirname + '/../../chat/src/index.html');
 
-app.get('/', function(request, response) {
-    response.render('/index');
-});
+// app.get('/', function(request, response) {
+//     response.render('/index');
+// });
 
 mongoose.connect('mongodb://localhost:27017/test');
 
